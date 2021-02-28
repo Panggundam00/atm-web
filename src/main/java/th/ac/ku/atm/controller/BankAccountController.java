@@ -29,6 +29,7 @@ public class BankAccountController {
         return "redirect:bankaccount";
     }
 
+
     @GetMapping("/edit/{id}")
     public String getEditBankAccountPage(@PathVariable int id, Model model) {
         BankAccount account = bankAccountService.getBankAccount(id);
@@ -46,7 +47,11 @@ public class BankAccountController {
         return "redirect:/bankaccount";
     }
 
-
+//    @PostMapping("/delete/{id}")
+//    public String deleteAccount(@PathVariable int id) {
+//        bankAccountService.deleteBankAccount(id);
+//        return "home";
+//    }
 
 
 

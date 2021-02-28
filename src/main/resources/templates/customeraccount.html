@@ -12,13 +12,29 @@
         <tr>
             <th>Type</th>
             <th>Balance</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="account : ${bankaccounts}">
             <td th:text="${account.type}"></td>
             <td th:text="${account.balance}"></td>
+            <td><form th:action="@{/bankaccount/edit/{id}(id=${account.id})}" method="POST">
+                <button type="submit" class="btn btn-primary">Deposit and Withdraw</button>
+            </form>
+                <br/>
+                <form th:action="@{/bankaccount/delete/{id}(id=${account.id})}" method="POST">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            </td>
         </tr>
         </tbody>
+
     </table>
+
+
+
+
+
+
 </div>
