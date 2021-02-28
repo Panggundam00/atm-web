@@ -5,6 +5,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Customer {
+
     @Id
     private int id;
 
@@ -51,6 +52,4 @@ public class Customer {
                 ", pin='" + pin + '\'' +
                 '}';
     }
-
-
 }

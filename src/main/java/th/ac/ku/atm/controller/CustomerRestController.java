@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/customer")
 public class CustomerRestController {
+
     private CustomerService customerService;
 
     public CustomerRestController(CustomerService customerService) {
@@ -27,5 +28,4 @@ public class CustomerRestController {
     public Customer getOne(@PathVariable int id) {
         return customerService.findCustomer(id);
     }
-
 }
